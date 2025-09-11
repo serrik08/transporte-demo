@@ -1,96 +1,296 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-#app {
-  max-width: 1280px;
+header {
+  background-color: #008037; /* Verde corporativo */
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem; /* espacio entre logo, nombre y menú */
+}
+
+.header-inner .logo {
+  height: 50px; /* ajusta según prefieras */
+  width: auto;
+}
+
+
+/* .header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+header nav ul li a {
+  color: #fff;
+  padding: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+  background-color: #ffd700; /* Amarillo corporativo */
+  color: #008037;
+  border-radius: 4px;
+}
+
+/* .hero {
+  background-color: #008037; 
+  background-image: url('/src/images/logo-transporte.svg');
+  background-repeat: no-repeat;
+  background-position: right center; 
+  background-size: auto 100%; 
+  
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative; 
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  background-color: rgba(0, 0, 0, 0); 
+  z-index: 1;
+} */
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+.hero-text h2,
+.hero-text p {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  /* Borde negro para destacar sobre el fondo */
+  text-shadow: 
+     2px 2px 0 #000, 
+    -2px 2px 0 #000, 
+     2px -2px 0 #000, 
+    -2px -2px 0 #000,
+     1px 1px 0 #000,
+    -1px 1px 0 #000,
+     1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+
+.hero {
+  background: url('/src/images/hero-bg.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  background-color: #008037; 
+} 
+
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #ffd700;
+  color: #008037;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #e6c200;
+}
+
+/* Misión */
+.mision {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 1rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.mision h2 {
+  color: #008037;
+  margin-bottom: 1rem;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+/* Servicios */
+.services {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
 }
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #008037;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
 }
 
 .card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
+  background: #f9f9f9;
+  padding: 1.5rem;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  width: 280px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Flota */
+.fleet {
+  background-color: #f1f1f1;
+  padding: 3rem 1rem;
+}
+
+.fleet h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #008037;
+  margin-bottom: 2rem;
+}
+
+.fleet-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.fleet-item {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.fleet-item img {
+  width: 100%;
+  height: auto;
+}
+
+.fleet-item h3 {
+  margin: 1rem;
+  color: #008037;
+}
+
+.fleet-item p {
+  margin: 0 1rem 1rem;
+}
+
+/* Contacto */
+.contact {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #008037;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.contact-info .info {
+  flex: 1 1 300px;
+}
+
+.contact-info .form {
+  flex: 1 1 300px;
+}
+
+.contact-info label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.contact-info input,
+.contact-info textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+footer {
+  background-color: #008037;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
 }

@@ -1,13 +1,120 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FOURTY TRANS S.R.L.</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <img src="/src/images/logo-transporte.svg" alt="Logo FOURTY TRANS" class="logo" />
+      <h1>FOURTY TRANS S.R.L.</h1>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#flota">Flota</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <div class="hero-text">
+      <h2>Moviendo Bolivia con seguridad y confianza</h2>
+      <p>Somos su aliado estratégico en transporte y logística a nivel nacional.</p>
+      <a href="#contacto" class="btn">Contáctanos</a>
+    </div>
+  </section>
+
+  <!-- Misión -->
+  <section class="mision">
+    <h2>Nuestra Misión</h2>
+    <p>
+      En FOURTY TRANS S.R.L. tenemos el compromiso de brindar soluciones de transporte
+      seguras, eficientes y confiables en todo el territorio boliviano, contribuyendo al
+      crecimiento de nuestros clientes mediante un servicio de calidad y responsabilidad.
+    </p>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="services">
+    <h2>Nuestros Servicios</h2>
+    <div class="service-cards">
+      <div class="card">
+        <h3>Transporte de carga nacional</h3>
+        <p>Movilizamos carga seca y general a nivel urbano, interdepartamental y nacional.</p>
+      </div>
+      <div class="card">
+        <h3>Transporte internacional</h3>
+        <p>Conectamos Bolivia con países de la región, asegurando la entrega puntual.</p>
+      </div>
+      <div class="card">
+        <h3>Transporte especializado</h3>
+        <p>Servicio para mercancías que requieren condiciones especiales y mayor cuidado.</p>
+      </div>
+      <div class="card">
+        <h3>Gestión y logística</h3>
+        <p>Asesoramiento en la planificación y optimización de rutas y tiempos de entrega.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flota -->
+  <section id="flota" class="fleet">
+    <h2>Nuestra Flota</h2>
+    <div class="fleet-items">
+      <div class="fleet-item">
+        <!-- <img src="/src/images/camion-abierto.jpg" alt="Camión abierto" /> -->
+        <h3>Camiones abiertos</h3>
+        <p>Capacidad de gran volumen, ideales para materiales de construcción y carga pesada.</p>
+      </div>
+      <div class="fleet-item">
+        <!-- <img src="/src/images/furgon.jpg" alt="Camión furgón" /> -->
+        <h3>Camiones furgón</h3>
+        <p>Protección para mercancía delicada, cerrados y seguros para condiciones climáticas.</p>
+      </div>
+      <div class="fleet-item">
+        <!-- <img src="/src/images/plataforma.jpg" alt="Camión plataforma" /> -->
+        <h3>Camiones plataforma</h3>
+        <p>Especiales para transporte de contenedores, maquinaria y carga sobredimensionada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contact">
+    <h2>Contacto</h2>
+    <div class="contact-info">
+      <div class="info">
+        <p><strong>WhatsApp / Celulares:</strong> 72719522 - 71773666</p>
+        <p><strong>Correo:</strong> fourty.srl@gmail.com</p>
+        <p><strong>Dirección:</strong> Av. Siglo XX y calle Guinea, Cochabamba - Bolivia</p>
+      </div>
+      <div class="form">
+        <form action="#" method="post">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required />
+          
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required />
+          
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 FOURTY TRANS S.R.L. Todos los derechos reservados.</p>
+  </footer>
+</body>
 </html>
