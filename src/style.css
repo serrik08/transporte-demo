@@ -36,10 +36,9 @@ header {
 }
 
 .header-inner .logo {
-  height: 50px; /* ajusta según prefieras */
+  height: 150px; /* ajusta según prefieras */
   width: auto;
 }
-
 
 /* .header-inner {
   max-width: 1200px;
@@ -95,6 +94,17 @@ header nav ul li a:hover {
   background-color: rgba(0, 0, 0, 0); 
   z-index: 1;
 } */
+.hero {
+  background: url('/src/images/trailer1.png') right/cover no-repeat;
+  background-size: auto 60%, cover; 
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  background-color: #008037; 
+}
 
 .hero-text {
   position: relative;
@@ -118,7 +128,7 @@ header nav ul li a:hover {
 }
 
 
-.hero {
+/* .hero {
   background: url('/src/images/hero-bg.jpg') center/cover no-repeat;
   height: 60vh;
   display: flex;
@@ -127,7 +137,7 @@ header nav ul li a:hover {
   color: #fff;
   text-align: center;
   background-color: #008037; 
-} 
+}  */
 
 
 .hero-text h2 {
